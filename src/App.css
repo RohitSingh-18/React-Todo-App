@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.TodoHeading {
+  margin-top: 32px;
+  padding-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+
+.todoNav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid black;
+}
+
+.nav-items {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.todoNav li {
+  width: 50%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.todoNav li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #2f80ed;
+}
+
+.todo-input {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  gap: 30px;
+  
+}
+
+.todo-input input {
+  height: 56px;
+  width: 476px;
+  border-radius: 12px;
+  border: 1px solid #bdbdbd;
+  /* Cursor sets to placeholder */
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+
+
+input:hover{
+  border: 2px solid #2f80ed;
+}
+
+input[type=text]:focus{
+  outline: 1px solid #2f80ed;
+  border: 1px solid #2f80ed;
+
+}
+
+::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.todo-input .btn {
+  height: 56px;
+  width: 109px;
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  background-color: #2f80ed;
+  border: none;
+}
+
+.todo-input .btn:hover{
+  background-color:#1e63d4;;
+  cursor: pointer;
+}
+
