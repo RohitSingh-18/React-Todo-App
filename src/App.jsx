@@ -1,17 +1,17 @@
-import './App.css'
-import React from 'react'
-import TodoHeading from './components/title'
-import TodoInput from './components/TodoInput'
+import "./App.css";
+import React from "react";
+import TodoHeading from "./Components/TodoHeading";
+import TodoInput from "./Components/TodoInput";
+import TodoNav from "./Components/TodoNav";
 
 function App() {
-
   return (
     <>
       <TodoHeading />
+      <TodoNav />
       <TodoInput />
     </>
-  )
+  );
 }
 
-export default App
-
+export default App;
