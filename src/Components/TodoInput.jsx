@@ -1,4 +1,6 @@
+// TodoInput.js
 import React, { useState } from "react";
+import TodoList from "./TodoList";
 
 const TodoInput = () => {
   const [Title, setTitle] = useState("");
@@ -7,7 +9,6 @@ const TodoInput = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     setMainTask([...MainTask, { Title }]);
-    setTitle("");
   };
 
   const deleteHandler = (id) => {
@@ -15,35 +16,6 @@ const TodoInput = () => {
     copyTask.splice(id, 1);
     setMainTask(copyTask);
   };
-
-  let renderTask = (
-    <h2
-      style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}
-    >
-      No Tasks
-    </h2>
-  );
-
-  if (MainTask.length > 0) {
-    renderTask = MainTask.map((task, id) => {
-      return (
-        <>
-          <li key={id}>
-            <div>
-              <h5>{task.Title}</h5>
-            </div>
-            <button
-              onClick={() => {
-                deleteHandler(id);
-              }}
-            >
-              Delete
-            </button>
-          </li>
-        </>
-      );
-    });
-  }
 
   return (
     <>
@@ -59,12 +31,13 @@ const TodoInput = () => {
         <button className="btn">Add</button>
       </form>
 
-      <div>
-        <ul>{renderTask}</ul>
+      <div
+        style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}
+      >
+        <TodoList tasks={MainTask} onDelete={deleteHandler} />
       </div>
     </>
   );
 };
 
 export default TodoInput;
-//todoinput.jsx
