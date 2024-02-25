@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const TodoNav = () => {
   return (
@@ -7,19 +7,19 @@ const TodoNav = () => {
       <div className="todoNav">
         <ul className="nav-items">
           <li>
-            <Link style={{ textDecoration: "none" }} to="/">
+            <NavLink style={{ textDecoration: "none", color: 'black' }} to="/">
               All
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/active">
+            <NavLink style={{ textDecoration: "none", color: 'black' }} to="/active">
               Active
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/completed">
+            <NavLink style={{ textDecoration: "none", color: 'black' }} to="/completed">
               Completed
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

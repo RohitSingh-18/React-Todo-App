@@ -1,9 +1,10 @@
 import React from "react";
+import App from "../App";
 
 const Active = () => {
   return (
     <>
-      <h1>Active</h1>
+      <App />
     </>
   );
 };

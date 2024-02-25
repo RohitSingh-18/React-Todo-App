@@ -37,7 +37,8 @@
   font-weight: 600;
 }
 
-.todoNav li:hover {
+
+.todoNav .nav-items li .active{
   cursor: pointer;
   border-bottom: 3px solid #2f80ed;
 }
@@ -47,8 +48,6 @@
   margin-top: 30px;
   justify-content: center;
   gap: 30px;
-  
-  
 }
 
 .todo-input input {
@@ -61,15 +60,13 @@
   padding-left: 15px;
 }
 
-
-input:hover{
+input:hover {
   border: 2px solid #2f80ed;
 }
 
-input[type=text]:focus{
+input[type="text"]:focus {
   outline: 1px solid #2f80ed;
   border: 1px solid #2f80ed;
-
 }
 
 ::-webkit-input-placeholder {
@@ -88,8 +85,8 @@ input[type=text]:focus{
   border: none;
 }
 
-.todo-input .btn:hover{
-  background-color:#1e63d4;;
+.todo-input .btn:hover {
+  background-color: #1e63d4;
   cursor: pointer;
 }
 
@@ -103,7 +100,31 @@ input[type=text]:focus{
   gap: 25px;
 }
 
-input:checked ~ label{
+input:checked ~ label {
   text-decoration: line-through;
   color: #bdbdbd;
+}
+
+.del-btn {
+  height: 40px;
+  width: 109px;
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  background-color: #eb5757;
+  border: none;
+  margin-top: 10px;
+}
+
+.del-btn:hover {
+  background-color: #ca2929;
+  cursor: pointer;
+}
+
+.del-all-btn {
+  width: 34%;
+  display: flex;
+  justify-content: end;
+  margin-right: auto;
+  margin-left: auto;
 }

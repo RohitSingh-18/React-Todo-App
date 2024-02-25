@@ -1,9 +1,18 @@
 import React from "react";
+import App from "../App";
+import "../App.css";
+import TodoHeading from "../Components/TodoHeading";
+import TodoNav from "../Components/TodoNav";
 
 const Home = () => {
   return (
     <>
-      <h1>Completed</h1>
+      <TodoHeading />
+      <TodoNav />
+
+      <div className="del-all-btn">
+        <button className="del-btn">Delete All</button>
+      </div>
     </>
   );
 };
