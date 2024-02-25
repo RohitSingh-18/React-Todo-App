@@ -1,6 +1,6 @@
 // TodoInput.js
 import React, { useState } from "react";
-import TodoList from "./TodoList";
+import TodoList from "./TodoDisplay";
 
 const TodoInput = () => {
   const [Title, setTitle] = useState("");
@@ -9,6 +9,7 @@ const TodoInput = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     setMainTask([...MainTask, { Title }]);
+    setTitle("");
   };
 
   const deleteHandler = (id) => {
@@ -31,9 +32,7 @@ const TodoInput = () => {
         <button className="btn">Add</button>
       </form>
 
-      <div
-        style={{ display: "flex", justifyContent: "center", marginTop: "25px" }}
-      >
+      <div>
         <TodoList tasks={MainTask} onDelete={deleteHandler} />
       </div>
     </>

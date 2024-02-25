@@ -48,6 +48,7 @@
   justify-content: center;
   gap: 30px;
   
+  
 }
 
 .todo-input input {
@@ -92,3 +93,17 @@ input[type=text]:focus{
   cursor: pointer;
 }
 
+.add-todo {
+  display: flex;
+  width: 476px;
+  margin-right: auto;
+  margin-left: 30%;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 25px;
+}
+
+input:checked ~ label{
+  text-decoration: line-through;
+  color: #bdbdbd;
+}
